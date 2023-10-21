@@ -32,16 +32,20 @@ public class Main {
             double area = triangle.calculateArea();
             String classification = triangle.type();
             System.out.println("Triangle " + (i + 1) + " - Perimeter: " + perimeter + ", Area: " + area + " , Type: " + classification);
-            System.out.print("Enter a point X to check if it's inside the triangle: ");
-            double x = scanner.nextDouble();
-            System.out.print("Enter a point Y to check if it's inside the triangle: ");
-            double y = scanner.nextDouble();
-            Point point = new Point(x, y);
 
+        }
+        System.out.print("Enter a point X to check if it's inside the triangle: ");
+        double x = scanner.nextDouble();
+        System.out.print("Enter a point Y to check if it's inside the triangle: ");
+        double y = scanner.nextDouble();
+        Point point = new Point(x, y);
+
+        for(int i = 0; i < numTriangles; i++) {
+            Triangle triangle = triangles[i];
             if (triangle.isPointInside(point)) {
-                System.out.println("---The point is inside the triangle.---");
+                System.out.println("For Traingle" + (i+1) + ":---The point is inside the triangle.---");
             } else {
-                System.out.println("---The point is not inside the triangle.---");
+                System.out.println("For Traingle" + (i+1) + ":---The point is not inside the triangle.---");
             }
         }
     }
