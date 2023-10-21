@@ -10,7 +10,6 @@ public class Main {
             System.out.println("Please enter the value greater than 3 or equal to 3...");
             return;
         }
-
         Triangle[] triangles = new Triangle[numTriangles];
 
         for (int i = 0; i < numTriangles; i++) {
